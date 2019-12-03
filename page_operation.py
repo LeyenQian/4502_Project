@@ -130,13 +130,13 @@ class PortalPage(BasePage):
             self.web_driver.switch_to.window(new_tab)
 
 
-    def collectBBC(self):
+    def collectBBC(self, result_path: str):
         pass
 
 
-    def collectCNN(self):
+    def collectCNN(self, result_path: str):
         pass
 
 
-    def collectRT(self):
+    def collectRT(self, result_path: str):
         pass

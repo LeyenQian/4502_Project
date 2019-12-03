@@ -5,9 +5,16 @@ import shutil as im_shutil
 import random as im_rand
 import page_operation as im_pg_opr
 
+from enum import Enum
 from config_manager import ConfigManager
 from selenium.common import exceptions as im_selexc
 from typing import List
+
+class SitesCode(Enum):
+    BBC: int = 0x0
+    CNN: int = 0x1
+    RT: int = 0x2
+    DEFAULT: int = 0xff
 
 
 def removeFolder(path : str):
@@ -23,7 +30,13 @@ def removeFolder(path : str):
     return
 
 
-def main():
+def automation(sites_code: int = SitesCode.DEFAULT.value, result_path: str = ""):
+    if sites_code == SitesCode.DEFAULT.value:
+        return
+
+    if result_path == "":
+        return
+
     # prepare config file environment
     full_name = im_os.path.basename(__file__)
     shor_name = im_os.path.splitext(full_name)[0]
@@ -45,14 +58,17 @@ def main():
     portal_page = im_pg_opr.PortalPage(target_path = '.\\' + shor_name)
     
 
-    im_time.sleep(20)
-
-
+    if sites_code == SitesCode.BBC.value:
+        portal_page.collectBBC(result_path)
+    elif sites_code == SitesCode.CNN.value:
+        portal_page.collectCNN(result_path)
+    elif sites_code == SitesCode.RT.value:
+        portal_page.collectRT(result_path)
+    else:
+        removeFolder(dir_path)
 
     portal_page.web_driver.quit()
-    im_time.sleep(2)
-    removeFolder(dir_path)
 
 
 if __name__ == '__main__':
-        main()
+        automation(SitesCode.BBC.value)
