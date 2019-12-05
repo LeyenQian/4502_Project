@@ -49,6 +49,7 @@ class BasePage:
         fullPath = _os.path.abspath(self.target_path)
         my_chrome_option.add_argument('--disk-cache-dir=' + fullPath)
         my_chrome_option.binary_location = 'C:\\chrome\\chrome.exe'
+        my_chrome_option.add_experimental_option('prefs', {"profile.managed_default_content_settings.images":2})
 
         if sock_vers != '' and sock_addr != '' and sock_port != '':
             my_chrome_option.add_argument('--proxy-server=socks' + sock_vers + '://' + sock_addr + ':' + sock_port)
