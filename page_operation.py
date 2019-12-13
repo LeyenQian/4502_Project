@@ -156,7 +156,7 @@ class PortalPage(BasePage):
             article_ele = self.web_driver.find_element_by_class_name(self.BBC_link_article_tag)
         except im_selexc.NoSuchElementException:
             return ''
-        
+
         para_eles = article_ele.find_elements_by_tag_name('p')
         article: str = ''
         for item in para_eles:
@@ -210,9 +210,10 @@ class PortalPage(BasePage):
         except im_selexc.NoSuchElementException:
             return ''
         
-        para_eles = article_ele.find_elements_by_class_name('zn-body__paragraph')
-        if(len(para_eles) == 0):
-            para_eles = article_ele.find_elements_by_xpath("//div[contains(@class, 'zn-body__paragraph')]")
+        para_eles = article_ele.find_elements_by_xpath("//div[contains(@class, 'zn-body__paragraph')]")
+        # para_eles = article_ele.find_elements_by_class_name('zn-body__paragraph')
+        # if(len(para_eles) == 0):
+        #     para_eles = article_ele.find_elements_by_xpath("//div[contains(@class, 'zn-body__paragraph')]")
 
         article: str = ''
         for item in para_eles:
