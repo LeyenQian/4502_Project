@@ -16,6 +16,7 @@ class SitesCode(Enum):
     ABC: int = 0x2
     DEFAULT: int = 0xff
 
+
 class CategoryCode(Enum):
     US_CA: int = 0x0
     Business: int = 0x1
