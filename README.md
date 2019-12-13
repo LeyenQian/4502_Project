@@ -16,12 +16,15 @@ This is the final project for data mining course [CSCI 4502], it is consists of 
     a. combine all articles under each News category into a single csv file for further data analysis<br/>
     b. csvs are stored under "result_csv" directory<br/>
     
-  3. article_analysis.py<br/>
+  3. Analysis_frequent_itemset.ipynb & Analysis_k_means.ipynb (require Jupyter environment)<br/>
     a. read the csv files from "result_csv" directory<br/>
-    b. analysis articles and generate graphs under "result_img" directory<br/>
+    b. analysis articles and generate graphs under "plot" directory<br/>
+
+  4. k_shingle.ipynb<br/>
+    a. this is the test version of data analysis before start online News Retrieving<br/>
     
  <b>Dependencies:</b> (may required to install through pip command)
-  1. Python Library for article_analysis.py<br/>
+  1. Python Library for Analysis_frequent_itemset.ipynb and Analysis_k_means.ipynb<br/>
     a. pandas<br/>
     b. mlxtend<br/>
     c. matplotlib<br/>
