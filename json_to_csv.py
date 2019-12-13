@@ -1,6 +1,7 @@
 import json
 import os
 import csv
+from typing import List
 
 
 def convert(json_path: str, csv_path: str, csv_name: str) -> bool:
