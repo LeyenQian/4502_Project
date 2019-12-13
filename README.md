@@ -4,6 +4,7 @@
 This is the final project for data mining course [CSCI 4502], it is consists of 2 parts:
   1. data crawling (retrieve articles from specified websites)
   2. data analysis (use several algorithms to analysis the relation between data)
+  3. link to github: https://github.com/LeyenQian/4502_project/tree/master
   
  <b>Run:</b>
   1. Automation.py (at least Windows 7 SP1 x64 with Visual C++ 2015 patch)<br/>
