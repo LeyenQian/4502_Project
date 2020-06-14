@@ -1,5 +1,6 @@
-# News Comparison with Real-time Data Crawling
-
+# News Comparison with Real-time Data Crawling</br></br>
+<b>For 3308 lab_4</b>
+Partner: (Puyuan Zhang)</br></br>
 <b>Description:</b>
 This is the final project for data mining course [CSCI 4502], it is consists of 2 parts:
   1. data crawling (retrieve articles from specified websites)
